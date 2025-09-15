@@ -13,7 +13,7 @@ const OptimizedVideo = ({
 }) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [hasError, setHasError] = useState(false);
-  const [isPlaying, setIsPlaying] = useState(false);
+  // const [isPlaying, setIsPlaying] = useState(false);
   const videoRef = useRef(null);
 
   useEffect(() => {
@@ -30,13 +30,13 @@ const OptimizedVideo = ({
       onError();
     };
 
-    const handlePlay = () => setIsPlaying(true);
-    const handlePause = () => setIsPlaying(false);
+    // const handlePlay = () => setIsPlaying(true);
+    // const handlePause = () => setIsPlaying(false);
 
     video.addEventListener('loadeddata', handleLoadedData);
     video.addEventListener('error', handleError);
-    video.addEventListener('play', handlePlay);
-    video.addEventListener('pause', handlePause);
+    // video.addEventListener('play', handlePlay);
+    // video.addEventListener('pause', handlePause);
 
     // Preload the video
     video.preload = 'metadata';
@@ -44,8 +44,8 @@ const OptimizedVideo = ({
     return () => {
       video.removeEventListener('loadeddata', handleLoadedData);
       video.removeEventListener('error', handleError);
-      video.removeEventListener('play', handlePlay);
-      video.removeEventListener('pause', handlePause);
+      // video.removeEventListener('play', handlePlay);
+      // video.removeEventListener('pause', handlePause);
     };
   }, [onLoad, onError]);
 
@@ -55,7 +55,7 @@ const OptimizedVideo = ({
         <div className="video-loading-overlay">
           <div className="video-loading-spinner">
             <div className="spinner"></div>
-            <span>Loading video...</span>
+            <span className="loading-text">Loading video...</span>
           </div>
         </div>
       )}
