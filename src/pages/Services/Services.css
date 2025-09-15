@@ -104,11 +104,10 @@
   position: relative;
   min-height: 60vh;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   overflow: hidden;
-  margin: 0;
-  padding: 0;
-  width: 100%;
+  margin-top: -80px;
+  padding-top: 160px;
 }
 
 /* Moving Services Bar */
@@ -176,7 +175,7 @@
 .services-hero-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 2rem 2rem 0 2rem;
   text-align: center;
   position: relative;
   z-index: 3;
@@ -747,6 +746,22 @@
 
 /* Responsive design for mobile */
 @media (max-width: 768px) {
+  .services-hero {
+    min-height: 50vh;
+  }
+  
+  .services-hero-title {
+    font-size: 2rem;
+  }
+  
+  .services-hero-description {
+    font-size: 1rem;
+  }
+  
+  .services-hero-buttons {
+    justify-content: center;
+  }
+  
   .services {
     padding: 4rem 0;
   }

@@ -23,6 +23,10 @@
 .loading-content {
   text-align: center;
   animation: loadingFadeIn 0.8s ease-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 @keyframes loadingFadeIn {
@@ -40,6 +44,9 @@
 .loading-logo {
   margin-bottom: 2rem;
   animation: logoBounce 1s ease-in-out 0.3s both;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @keyframes logoBounce {

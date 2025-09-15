@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import OptimizedImage from './OptimizedImage';
 import './Loading.css';
 
 const Loading = ({ onLoadingComplete }) => {
@@ -29,10 +30,11 @@ const Loading = ({ onLoadingComplete }) => {
     <div className={`loading-overlay ${isAnimating ? 'loading-fade-out' : ''}`}>
       <div className="loading-content">
         <div className="loading-logo">
-          <img 
+          <OptimizedImage 
             src="https://res.cloudinary.com/dvybb2xnc/image/upload/v1757918173/East-Kent-Cardiology-Logo-Design-Freelance-Graphic-Designer-Margate-Thanet-Kent_zhnxm4.webp" 
             alt="Cardiology Hospital Logo" 
             className="loading-logo-image"
+            lazy={false}
           />
         </div>
         <h1 className="loading-title">Cardiology Hospital</h1>

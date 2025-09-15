@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { 
   FaHeartbeat, 
   FaChild, 
@@ -10,6 +11,7 @@ import {
   FaRunning,
   FaStethoscope
 } from 'react-icons/fa';
+import OptimizedVideo from '../../components/OptimizedVideo';
 import './Services.css';
 
 const Services = () => {
@@ -184,19 +186,14 @@ const Services = () => {
       <div className="services-hero">
         {/* Video Background */}
         <div className="services-hero-video-background">
-          <video
-            autoPlay
-            muted
-            loop
-            playsInline
+          <OptimizedVideo
+            src="https://res.cloudinary.com/dvybb2xnc/video/upload/v1757920204/WhatsApp_Video_2025-09-15_at_10.09.52_cf4b595d_tjwsuf.mp4"
             className="services-hero-video"
-          >
-            <source 
-              src="https://res.cloudinary.com/dvybb2xnc/video/upload/v1757920204/WhatsApp_Video_2025-09-15_at_10.09.52_cf4b595d_tjwsuf.mp4" 
-              type="video/mp4" 
-            />
-            Your browser does not support the video tag.
-          </video>
+            autoPlay={true}
+            muted={true}
+            loop={true}
+            playsInline={true}
+          />
           <div className="services-hero-video-overlay"></div>
         </div>
         
@@ -209,9 +206,9 @@ const Services = () => {
               Comprehensive cardiac care provided by our expert team of specialists
             </p>
             <div className="services-hero-buttons">
-              <a href="/contact" className="services-hero-button contact-button">
+              <Link to="/contact" className="services-hero-button contact-button">
                 Contact
-              </a>
+              </Link>
             </div>
           </div>
         </div>

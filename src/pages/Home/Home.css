@@ -10,8 +10,10 @@
   position: relative;
   min-height: 60vh;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   overflow: hidden;
+  margin-top: -80px;
+  padding-top: 160px;
 }
 
 /* Video Background */
@@ -44,7 +46,7 @@
 .hero-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 2rem 2rem 0 2rem;
   text-align: center;
   position: relative;
   z-index: 3;

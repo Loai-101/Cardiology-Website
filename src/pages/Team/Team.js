@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import OptimizedImage from '../../components/OptimizedImage';
 import './Team.css';
 
 const Team = () => {
@@ -135,10 +136,11 @@ const Team = () => {
                 >
                   <div className="doctor-image">
                     {doctor.image.startsWith('http') ? (
-                      <img 
+                      <OptimizedImage 
                         src={doctor.image} 
                         alt={doctor.name}
                         className="doctor-avatar-image"
+                        lazy={true}
                       />
                     ) : (
                       <span className="doctor-avatar">{doctor.image}</span>

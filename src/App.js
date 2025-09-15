@@ -11,6 +11,7 @@ import Appointment from './pages/Appointment/Appointment';
 import ScrollToTop from './components/ScrollToTop';
 import Loading from './components/Loading';
 import './App.css';
+import './components/OptimizedComponents.css';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);

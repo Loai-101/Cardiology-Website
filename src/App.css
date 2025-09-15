@@ -33,7 +33,6 @@ body {
 /* Main content area */
 .main-content {
   flex: 1;
-  padding-top: 80px; /* Account for fixed header */
   background-color: #f8f9fa;
 }
 
@@ -42,7 +41,7 @@ body {
 .services-page,
 .team-page,
 .contact-page {
-  min-height: calc(100vh - 80px);
+  min-height: 100vh;
 }
 
 /* Code font for any code elements */

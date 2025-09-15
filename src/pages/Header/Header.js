@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import OptimizedImage from '../../components/OptimizedImage';
 import './Header.css';
 
 const Header = () => {
@@ -29,10 +30,11 @@ const Header = () => {
       <div className="header-container">
         <div className="header-logo">
           <Link to="/" className="header-logo-link" onClick={closeMobileMenu}>
-            <img 
+            <OptimizedImage 
               src="https://res.cloudinary.com/dvybb2xnc/image/upload/v1757918173/East-Kent-Cardiology-Logo-Design-Freelance-Graphic-Designer-Margate-Thanet-Kent_zhnxm4.webp" 
               alt="Cardiology Hospital Logo" 
               className="header-logo-image"
+              lazy={false}
             />
             <h1 className="header-title">Cardiology Hospital</h1>
           </Link>

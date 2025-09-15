@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import OptimizedVideo from '../../components/OptimizedVideo';
 import './Home.css';
 
 const Home = () => {
@@ -75,19 +76,14 @@ const Home = () => {
       <section id="home" className="hero">
         {/* Video Background */}
         <div className="hero-video-background">
-          <video
-            autoPlay
-            muted
-            loop
-            playsInline
+          <OptimizedVideo
+            src="https://res.cloudinary.com/dvybb2xnc/video/upload/v1757917079/WhatsApp_Video_2025-09-15_at_09.15.43_ebcab0e5_dgx4my.mp4"
             className="hero-video"
-          >
-            <source 
-              src="https://res.cloudinary.com/dvybb2xnc/video/upload/v1757917079/WhatsApp_Video_2025-09-15_at_09.15.43_ebcab0e5_dgx4my.mp4" 
-              type="video/mp4" 
-            />
-            Your browser does not support the video tag.
-          </video>
+            autoPlay={true}
+            muted={true}
+            loop={true}
+            playsInline={true}
+          />
           <div className="hero-video-overlay"></div>
         </div>
         
